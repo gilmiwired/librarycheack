@@ -25,7 +25,7 @@ ahahah
     atom-html-preview(atom内にあるパッケージ)を使うと作業がはかどると思います。
     できればtabを使うように
 
-~~~どんどんpullリクエスト送ってください。マージします。~~~
+~~どんどんpullリクエスト送ってください。マージします。~~
 
 サイト : [site](https://ibkosen-librarycondition.netlify.app/)
 資料等 : [google drive](https://drive.google.com/drive/folders/1YB1rYuMj9Dod96YIM1sCtQFkhL5izmdC?usp=sharing)

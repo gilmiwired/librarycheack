@@ -1,4 +1,4 @@
-var wSck= new WebSocket("echo.websocket.org");// WebSocketオブジェクト生成
+var wSck= new WebSocket("https://ibkosen-librarycondition.netlify.app/socket.html");// WebSocketオブジェクト生成
 
 wSck.onopen = function() {//ソケット接続時のアクション
 	document.getElementById('show').innerHTML += "接続しました。" + "<br/>";

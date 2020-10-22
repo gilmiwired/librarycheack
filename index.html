@@ -2,16 +2,25 @@
 <html lang = ja>
 <head>
     <meta charset="utf-8">
-    <title>Hello World!</title>
-    <script type="text/javascript" src = "https://ibkosen-librarycondition.netlify.app/main.js"></script>
+    <title>図書室混雑状況確認サイト</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src = "main.js"></script>
 </head>
 <body>
-    <p>Hello World!!</p>
-    <p>ahahaha</p>
-    <div
-            style="width: 500px; height: 200px; overflow-y: auto; border: 1px solid #333;"
-            id="show"></div>
-        <input type="text" size="80" id="msg" name="msg" />
-        <input type="button" value="送信" onclick="sendMsg();" />
+  <h1>現在の混雑状況</h1>
+  <h1>
+    <span id="view_time"></span>
+    <script type="text/javascript" src="main.js"></script>
+  </h1>
+  <div id="koshin">
+    <button onClick="koshin()">カメラの更新</button>
+  </div>
+  <p id="sato">
+    <img src="img/sato.jpg" alt="さとうとしき" title="4-I 佐藤">
+  </p>
+  <div id="fukidashi">
+    <img src="img/fukidashi.png" alt="吹き出し">
+  </div>
+  <div id="serifu">F5でええやん</div>
 </body>
 </html>

@@ -1,0 +1,19 @@
+
+<!doctype html>
+<html lang = ja>
+<head>
+    <meta charset="utf-8">
+    <title>図書室混雑状況確認サイト</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src = "socket.js"></script>
+
+</head>
+<body>
+	<h1>ぁぅ人</h1>
+	<div
+            style="width: 500px; height: 200px; overflow-y: auto; border: 1px solid #333;"
+            id="show"></div>
+        <input type="text" size="80" id="msg" name="msg" />
+        <input type="button" value="送信" onclick="sendMsg();" />
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* 見出しの位置 */
+h1 {
+    text-align: center;
+}
+
+/* 現在時刻の配置 */
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* ボタンの配置 */
+div#koshin {
+    text-align: center;
+}
+
+/* としきの画像 */
+p#sato img {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 240px;
+    left: 580px;
+}
+
+/* 吹き出しの画像 */
+div#fukidashi img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 200px;
+    left: 380px;
+}
+
+/* セリフの配置 */
+div#serifu {
+    font-weight: bold;
+    position: absolute;
+    top: 255px;
+    left: 430px;
+}

@@ -1,16 +1,16 @@
-//alert('hello');
-var wSck= new WebSocket("http://192.16.221.93");// WebSocketオブジェクト生成
-
-wSck.onopen = function() {//ソケット接続時のアクション
-    document.getElementById('show').innerHTML += "接続しました。" + "<br/>";
-};
-
-wSck.onmessage = function(e) {//メッセージを受け取ったときのアクション
-    document.getElementById('show').innerHTML += e.data + "<br/>";
-};
-
-var sendMsg = function(val) {//メッセージを送信するときのアクション
-    var line = document.getElementById('msg');//入力内容を取得
-    wSck.send(line.value);//ソケットに送信
-    line.value = "";//内容をクリア
-};
+document.getElementById("view_time").innerHTML = getNow();
+function getNow(){//現在時刻の取得
+    var now = new Date();
+    var year = now.getFullYear();
+    var mon = now.getMonth()+1;
+    var day = now.getDate();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+  
+    var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
+    return s;
+}
+function koshin(){
+	location.reload();
+}

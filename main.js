@@ -11,7 +11,6 @@ function getNow(){//現在時刻の取得
     var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
     return s;
 }
-
 function koshin(){
-    location.reload();
+	location.reload();
 }

@@ -1,3 +1,6 @@
+<script>
+'use strict';
+
 let socket = new WebSocket("wss://javascript.info/article/websocket/demo/hello");
 
 socket.onopen = function(e) {

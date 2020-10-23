@@ -39,3 +39,8 @@ div#serifu {
     top: 255px;
     left: 430px;
 }
+
+/* 接続確認サイト用リンク */
+div#socket {
+    text-align: center;
+}

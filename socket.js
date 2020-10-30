@@ -1,15 +1,27 @@
-var wSck= new WebSocket("ws://javascript.info");// WebSocketオブジェクト生成
+'use strict';
 
-wSck.onopen = function() {//ソケット接続時のアクション
-	document.getElementById('show').innerHTML += "接続しました。" + "<br/>";
+let socket = new WebSocket("wss://javascript.info/article/websocket/demo/hello");
+
+socket.onopen = function(e) {
+  alert("[open] Connection established");
+  alert("Sending to server");
+  socket.send("My name is John");
 };
 
-wSck.onmessage = function(e) {//メッセージを受け取ったときのアクション
-	document.getElementById('show').innerHTML += e.data + "<br/>";
+socket.onmessage = function(event) {
+  alert(`[message] Data received from server: ${event.data}`);
 };
 
-var sendMsg = function(val) {//メッセージを送信するときのアクション
-	var line = document.getElementById('msg');//入力内容を取得
-	wSck.send(line.value);//ソケットに送信
-	line.value = "";//内容をクリア
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    // e.g. サーバのプロセスが停止、あるいはネットワークダウン
+    // この場合、event.code は通常 1006 になります
+    alert('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  alert(`[error] ${error.message}`);
 };

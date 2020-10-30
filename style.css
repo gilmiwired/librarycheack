@@ -48,3 +48,12 @@ div#serifu {
 div#socket {
     text-align: center;
 }
+/* 隠しリンク */
+a#hide {
+    color: #000000;
+    text-decoration: none;
+}
+a#hide2 {
+    color: #ffffff;
+    text-decoration: none;
+}

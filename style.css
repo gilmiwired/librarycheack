@@ -17,8 +17,13 @@ h3 {
 div#koshin {
     text-align: center;
 }
-div#ongaku {
+/* カメラの画像の配置 */
+div#sample {
     text-align: center;
+}
+div#sample img{
+    width: 50%;
+    height: auto;
 }
 
 /* としきの画像 */
@@ -27,7 +32,7 @@ p#sato img {
     height: auto;
     position: absolute;
     top: 240px;
-    left: 580px;
+    left: 580px
 }
 /* 吹き出しの画像 */
 div#fukidashi img{

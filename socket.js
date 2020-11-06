@@ -1,4 +1,4 @@
-var wSck= new WebSocket("http://172.16.221.93/");// WebSocketオブジェクト生成
+var wSck= new WebSocket("ws://172.16.221.93");// WebSocketオブジェクト生成
 
 wSck.onopen = function() {//ソケット接続時のアクション
 	document.getElementById('show').innerHTML += "接続しました。" + "<br/>";

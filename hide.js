@@ -1,7 +1,7 @@
 var num = 0;
 
 function cheak() {
-    var num = document.getElementById('numpass').value;
+    num = document.getElementById('numpass').value;
     num = Number(num);
 }
 

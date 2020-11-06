@@ -11,5 +11,5 @@ wSck.onmessage = function(e) {//メッセージを受け取ったときのアク
 var sendMsg = function(val) {//メッセージを送信するときのアクション
 	var line = document.getElementById('msg');//入力内容を取得
 	wSck.send(line.value);//ソケットに送信
-	line.value = "";//内容をクリア
+	line.value = "";//内容をクリアt
 };

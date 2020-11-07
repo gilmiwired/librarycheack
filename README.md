@@ -5,7 +5,7 @@
 ここはwebページ用リポジトリよ
 ahahah
 
-<img src="https://profile-counter.glitch.me/ryanlanciaux/count.svg" alt="" />
+<img src="https://profile-counter.glitch.me/librarycheck/count.svg" alt="" />
 まぁ四人しか編集者がいないんで適当にブランチ切って適当に編集しちゃってください。
 
 

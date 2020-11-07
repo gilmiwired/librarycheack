@@ -1,13 +1,15 @@
 # 図書室空席確認システム　(librarycheack)
 
-ここはwebページ用リポジトリよ
+ここはホームページ用リポジトリよ
 ahaha
 
 
-アクセス数<br>
+***アクセス数***<br>
 <img src="https://profile-counter.glitch.me/librarycheck/count.svg" alt="" />
 
+
 まぁ四人しか編集者がいないんで適当にブランチ切って適当に編集しちゃってください。
+
 
 ***
 
@@ -30,6 +32,7 @@ ahaha
 
 ~~どんどんpullリクエスト送ってください。マージします。~~
 
+***
 
 サイト : [site](https://ibkosen-librarycondition.netlify.app/)
 資料等 : [google drive](https://drive.google.com/drive/folders/1YB1rYuMj9Dod96YIM1sCtQFkhL5izmdC?usp=sharing)

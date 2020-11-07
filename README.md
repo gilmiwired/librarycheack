@@ -5,13 +5,14 @@
 ここはwebページ用リポジトリよ
 ahahah
 
+<img src="https://alphabrend.sakura.ne.jp/counter/counter_image.svg" alt="">
 まぁ四人しか編集者がいないんで適当にブランチ切って適当に編集しちゃってください。
 
 
 
 
 
- 
+
 **注意点とか確認してほしいとことかそういうアレ**
 
 -commit時に競合するとき

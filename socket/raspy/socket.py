@@ -2,7 +2,8 @@ import socket
 import time
 from datetime import datetime
 
-HOST_IP = "192.168.0.10" # 接続するサーバーのIPアドレス
+HOST_IP = "172.16.221.93" # 接続するサーバーのIPアドレス
+
 PORT = 12345 # 接続するサーバーのポート
 DATESIZE = 1024  # 受信データバイト数
 

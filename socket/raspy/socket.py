@@ -3,6 +3,7 @@ import time
 from datetime import datetime
 
 HOST_IP = "172.16.221.93" # 接続するサーバーのIPアドレス
+
 PORT = 12345 # 接続するサーバーのポート
 DATESIZE = 1024  # 受信データバイト数
 

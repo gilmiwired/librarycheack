@@ -1,15 +1,26 @@
-var wSck= new WebSocket("ws://172.16.221.93");// WebSocketオブジェクト生成
+//WebSocket接続
+var connection = new WebSocket("ws://localhost:8000/ws/");
 
-wSck.onopen = function() {//ソケット接続時のアクション
-	document.getElementById('show').innerHTML += "接続しました。" + "<br/>";
+//接続通知
+connection.onopen = function(event) {
+	document.getElementById( "eventType" ).value = "通信接続イベント受信";
+	document.getElementById( "dispMsg" ).value = event.data;
 };
 
-wSck.onmessage = function(e) {//メッセージを受け取ったときのアクション
-	document.getElementById('show').innerHTML += e.data + "<br/>";
+//エラー発生
+connection.onerror = function(error) {
+	document.getElementById( "eventType" ).value = "エラー発生イベント受信";
+	document.getElementById( "dispMsg" ).value = error.data;
 };
 
-var sendMsg = function(val) {//メッセージを送信するときのアクション
-	var line = document.getElementById('msg');//入力内容を取得
-	wSck.send(line.value);//ソケットに送信
-	line.value = "";//内容をクリア
+//メッセージ受信
+connection.onmessage = function(event) {
+	document.getElementById( "eventType" ).value = "メッセージ受信";
+	document.getElementById( "dispMsg" ).value = event.data;
+};
+
+//切断
+connection.onclose = function() {
+	document.getElementById( "eventType" ).value = "通信切断イベント受信";
+	document.getElementById( "dispMsg" ).value = "";
 };

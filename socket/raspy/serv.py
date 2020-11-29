@@ -1,6 +1,10 @@
 import socket
+import pickle
+import cv2
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+pic = pickle.dumps('taki.png')
+
+with socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # IPアドレスとポートを指定
     s.bind(('127.0.0.1', 50007))
     # 1 接続
@@ -17,4 +21,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                     break
                 print('data : {}, addr: {}'.format(data, addr))
                 # クライアントにデータを返す(b -> byte でないといけない)
-                conn.sendall(b'Received: ' + data)
+                # conn.sendall(b'Received: ' + data)
+                conn.sendall(b'Received:'+pic)
+print('end')

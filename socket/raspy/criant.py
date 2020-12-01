@@ -1,6 +1,6 @@
 import socket
-import pickle
 import cv2
+import io
 from PIL import Image
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -9,7 +9,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # サーバにメッセージを送る
     s.sendall(b'hello mother fuckin beach')
     # ネットワークのバッファサイズは1024。
-im = Image.open(pickle.loads(s.recv(1024)))
+    data = s.recv(1024)
+im = Image.open(io.BytesIO(data))
 im.save("logo_py.png", colors=255)
 cv2.imshow('test', im)
 cv2.waitKey()

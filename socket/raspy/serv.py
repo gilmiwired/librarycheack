@@ -9,6 +9,9 @@ resized_img = cv2.resize(pic,(50,50))
 (status, encoded_img) = cv2.imencode('.jpg',pic, [int(cv2.IMWRITE_JPEG_QUALITY), IMAGE_QUALITY])
 print(type(encoded_img))
 print(encoded_img)
+packet_body = encoded_img.tostring()
+packet_header = len(packet_body).to_bytes(4, 'big')
+packet = packet_header + packet_body
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # IPアドレスとポートを指定
@@ -20,10 +23,16 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         # アクセス時コネクションとアドレス交換
         conn, addr = s.accept()
 
-        #pic = Image.open("taki.png")
-        #with io.BytesIO() as output:
-		#    pic.save(output,format="PNG")
-        #    picb = output.getvalue()#バイナリ取得
+        pic = cv2.imread("a.jpg")
+
+        resized_img = cv2.resize(pic,(50,50))
+        (status, encoded_img) = cv2.imencode('.jpg',pic, [int(cv2.IMWRITE_JPEG_QUALITY), IMAGE_QUALITY])
+        print(type(encoded_img))
+        print(encoded_img)
+
+        packet_body = encoded_img.tostring()
+        packet_header = len(packet_body).to_bytes(4, 'big')
+        packet = packet_header + packet_body
         with conn:
             while True:
                 # データを受け取る
@@ -32,5 +41,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                     break
                 print('data : {}, addr: {}'.format(data, addr))
                 # conn.sendall(b'Received: ' + data)
-                conn.sendall(b'Received:'+picb)
+                conn.sendall(b'Received:'+packet)
 print('end')

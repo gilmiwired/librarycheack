@@ -5,5 +5,6 @@ do
 	git pull
 	git add .
 	git commit -m 'auto commit'
-	sleep 100
+	git push origin	
+	sleep 10
 done

@@ -3,16 +3,6 @@ import cv2
 import io
 from PIL import Image
 
-IMAGE_QUALITY=30
-pic = cv2.imread("a.jpg")
-resized_img = cv2.resize(pic,(50,50))
-(status, encoded_img) = cv2.imencode('.jpg',pic, [int(cv2.IMWRITE_JPEG_QUALITY), IMAGE_QUALITY])
-print(type(encoded_img))
-print(encoded_img)
-packet_body = encoded_img.tostring()
-packet_header = len(packet_body).to_bytes(4, 'big')
-packet = packet_header + packet_body
-
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # IPアドレスとポートを指定
     s.bind(('127.0.0.1', 50007))

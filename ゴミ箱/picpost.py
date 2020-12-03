@@ -4,3 +4,4 @@ with open("a.jpg", "rb") as f:#画像をopen(読み込みみたいな？)する
     #url='https://profile-counter.glitch.me/librarycheck/pic_save.php'#送り先
 	url='https://ibkosen-librarycondition.netlify.app/pic_save.php'
 	r = requests.post(url, f.read())#送信
+s]

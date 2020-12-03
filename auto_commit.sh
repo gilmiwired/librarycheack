@@ -2,7 +2,8 @@
 
 while true
 do
+	git pull
 	git add .
 	git commit -m 'auto commit'
-	sleep 10
+	sleep 100
 done

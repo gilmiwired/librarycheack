@@ -29,17 +29,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         (status, encoded_img) = cv2.imencode('.jpg',pic, [int(cv2.IMWRITE_JPEG_QUALITY), IMAGE_QUALITY])
         print(type(encoded_img))
         print(encoded_img)
-
         packet_body = encoded_img.tostring()
         packet_header = len(packet_body).to_bytes(4, 'big')
         packet = packet_header + packet_body
-        with conn:
-            while True:
-                # データを受け取る
-                data = conn.recv(1024)
-                if not data:
-                    break
-                print('data : {}, addr: {}'.format(data, addr))
-                # conn.sendall(b'Received: ' + data)
-                conn.sendall(b'Received:'+packet)
+        conn.sendall(b'Received:'+packet)
 print('end')

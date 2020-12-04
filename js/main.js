@@ -1,7 +1,7 @@
 document.getElementById("view_time").innerHTML = getNow();
 var bgm;
 bgm = new Audio();
-bgm.src = "music/bgm.mp3"
+bgm.src = "../music/bgm.mp3"
 
 function getNow(){//現在時刻の取得
     var now = new Date();

@@ -18,7 +18,3 @@ function hide2jump() {
 function indexjump() {
     location.replace("index.html");
 }
-
-function calc(){
-
-}

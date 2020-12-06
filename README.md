@@ -1,6 +1,6 @@
 # 図書室空席確認システム　(librarycheack)
 
-
+いろいろとあってこちらに移動しました : [site](https://github.com/gilmiwired/librarrych)
 
 ここはホームページ用リポジトリよ
 

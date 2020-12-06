@@ -10,4 +10,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.sendall(b'hello mother fuckin beach')
     # ネットワークのバッファサイズは1024。
     data = s.recv(1024)
-	
+
+    

@@ -3,9 +3,7 @@
 
 
 ここはホームページ用リポジトリよ
-ahaha
-OHOHOHO
-nyanaya
+
 
 ***アクセス数***<br>
 <img src="https://profile-counter.glitch.me/librarycheck/count.svg" alt="" />
@@ -37,5 +35,5 @@ nyanaya
 
 ***
 
-サイト : [site](https://ibkosen-librarycondition.netlify.app/)
+サイト : [site]()
 資料等 : [google drive](https://drive.google.com/drive/folders/1YB1rYuMj9Dod96YIM1sCtQFkhL5izmdC?usp=sharing)
